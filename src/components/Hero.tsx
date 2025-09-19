@@ -27,11 +27,8 @@ const Hero = () => {
           <div className="text-center lg:text-left animate-slide-up order-1 lg:order-1">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-orbitron font-black mb-2 leading-tight">
               Hello, I'm{" "}
-              <span className="text-primary text-glow block sm:inline">Tong Wu</span>
+              <span className="text-primary text-glow block sm:inline">Alley Wu</span>
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-6 lg:mb-1 font-space-grotesk">
-              But you can call me <span className="text-pink-soft font-semibold">Alley</span> 😊
-            </p>
             
             {/* Mobile: Show title here, Desktop: Show after picture */}
             <p className="lg:hidden text-lg sm:text-xl font-exo font-semibold text-pink-soft mb-6">
@@ -77,7 +74,7 @@ const Hero = () => {
               <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
                 <img 
                   src={profilePhoto} 
-                  alt="Tong Wu (Alley)" 
+                  alt="Alley Wu" 
                   className="w-full h-full object-cover transition-smooth hover:scale-110 animate-float"
                 />
               </div>

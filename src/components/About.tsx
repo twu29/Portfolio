@@ -15,88 +15,64 @@ const About = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-orbitron font-black text-primary text-glow mb-4">
-            About Me
+            ABOUT ME
           </h2>
-          <p className="text-xl text-muted-foreground font-space-grotesk max-w-3xl mx-auto">
-            Currently pursuing a Bachelor of Science in Informatics at the University of Washington
-          </p>
+          <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* About content */}
+        <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-6">
-            <div className="bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-              <h3 className="text-2xl font-exo font-bold text-primary mb-4">Education</h3>
-              <div className="space-y-2">
-                <p className="font-space-grotesk font-semibold text-lg">
-                  Bachelor of Science in Informatics
-                </p>
-                <p className="text-muted-foreground">University of Washington | June 2026</p>
-                <p className="text-sm text-muted-foreground">
-                  Focus: Data Science, Software Engineering, Human-Centered Interaction
-                </p>
-                <p className="text-primary font-semibold">GPA: 3.85 / 4.00 (Dean's List)</p>
-              </div>
-            </div>
-
-            <div className="bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-              <h3 className="text-2xl font-exo font-bold text-primary mb-4">Contact</h3>
-              <div className="space-y-2 font-space-grotesk">
-                <p>📍 Seattle, Washington</p>
-                <p>📧 alleytongwu@gmail.com</p>
-                <p>📱 503-443-8896</p>
-                <p>🔗 linkedin.com/in/alley-wu</p>
-              </div>
-            </div>
+            <p className="text-lg text-muted-foreground font-space-grotesk leading-relaxed">
+              I'm a senior at the University of Washington majoring in Informatics with a focus on 
+              Data Science, Software Development, and Human-Centered Interaction 👩‍💻
+            </p>
+            
+            <p className="text-lg text-muted-foreground font-space-grotesk leading-relaxed">
+              My passion lies in building impactful AI technologies that solve real-world problems. I 
+              thrive on learning, experimenting, and collaborating to transform ideas into 
+              meaningful solutions 💪
+            </p>
           </div>
 
-          {/* Skills */}
-          <div className="space-y-8">
-            <div className="bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-              <h3 className="text-2xl font-exo font-bold text-primary mb-6">Technical Skills</h3>
-              <div className="space-y-4">
-                <div>
-                  <h4 className="font-chakra font-semibold mb-3 text-pink-soft">Languages & Technologies</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="secondary" 
-                        className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-smooth"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </div>
-              </div>
+          <div className="space-y-8 pt-8">
+            <h3 className="text-3xl font-orbitron font-black text-foreground">
+              SKILLS & TECHNOLOGIES
+            </h3>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Large Language Models
+              </Badge>
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Machine Learning
+              </Badge>
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Data Pipelines/APIs
+              </Badge>
             </div>
-
-            <div className="bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-              <h3 className="text-2xl font-exo font-bold text-primary mb-6">Core Strengths</h3>
-              <div className="flex flex-wrap gap-2">
-                {strengths.map((strength) => (
-                  <Badge 
-                    key={strength} 
-                    variant="outline" 
-                    className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-smooth"
-                  >
-                    {strength}
-                  </Badge>
-                ))}
-              </div>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                SQL/PostgreSQL/Supabase
+              </Badge>
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Python/Java/JavaScript/React
+              </Badge>
             </div>
-
-            <div className="bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-              <h3 className="text-2xl font-exo font-bold text-primary mb-4">Coursework</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground font-space-grotesk">
-                <li>• Data Structure and Algorithm</li>
-                <li>• Recommendation and Search System</li>
-                <li>• Software Designs</li>
-                <li>• Databases and Data Modeling</li>
-                <li>• Programming Languages and Implementation</li>
-                <li>• Data Policy and Ethics</li>
-              </ul>
+            
+            <div className="flex flex-wrap justify-center gap-4">
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Data Analysis/Visualization
+              </Badge>
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Cloud (Render)
+              </Badge>
+            </div>
+            
+            <div className="flex justify-center">
+              <Badge className="bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold rounded-full uppercase tracking-wider">
+                Human-Centered Interaction
+              </Badge>
             </div>
           </div>
         </div>
