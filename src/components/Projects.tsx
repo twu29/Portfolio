@@ -64,7 +64,9 @@ const Projects = () => {
       description: "Integrated BM25, TF-IDF, and LLM retrieval to rank recipes, improving query relevance. Applied multiple AI/ML libraries to clean/structure datasets for analysis. Designed a responsive search UI (JavaScript, CSS, HTML) for faster discovery.",
       technologies: ["Python", "PHP", "JavaScript", "HTML", "CSS", "AI/ML"],
       period: "September 2024 - December 2024",
-      links: {},
+      links: {
+        report: "/recipes-search-report.pdf"
+      },
       icon: "🔍"
     },
     {
