@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
+import { removeBackground, loadImage } from "../utils/backgroundRemoval";
 import logo from "../assets/logo-an.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  const [processedLogo, setProcessedLogo] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +24,24 @@ const Navigation = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const processLogo = async () => {
+      try {
+        const response = await fetch(logo);
+        const blob = await response.blob();
+        const img = await loadImage(blob);
+        const processedBlob = await removeBackground(img);
+        const processedUrl = URL.createObjectURL(processedBlob);
+        setProcessedLogo(processedUrl);
+      } catch (error) {
+        console.error('Failed to process logo:', error);
+        setProcessedLogo(logo); // Fallback to original logo
+      }
+    };
+
+    processLogo();
   }, []);
 
   const scrollToSection = (sectionId: string) => {
@@ -51,9 +71,9 @@ const Navigation = () => {
               className="flex items-center space-x-2 group"
             >
               <img 
-                src={logo} 
+                src={processedLogo || logo} 
                 alt="Alley Logo" 
-                className="w-16 h-16 object-contain group-hover:scale-105 transition-smooth filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 group-hover:hue-rotate-[315deg] group-hover:saturate-150"
+                className="w-16 h-16 object-contain group-hover:scale-105 transition-smooth group-hover:hue-rotate-[315deg] group-hover:saturate-150"
               />
             </button>
           </div>
