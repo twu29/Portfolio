@@ -65,31 +65,18 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Mobile description and scroll indicator - Order 3 */}
+          {/* Mobile description - Order 3 */}
           <div className="lg:hidden text-center order-3 max-w-lg mx-auto">
             <p className="text-sm sm:text-base text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
-            
-            {/* Scroll indicator to About */}
-            <div className="flex justify-center">
-              <button
-                onClick={() => scrollToSection("about")}
-                className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
-              >
-                <span className="text-sm font-space-grotesk mb-2">Learn More</span>
-                <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                  <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-                </div>
-              </button>
-            </div>
           </div>
         </div>
       </div>
       
-      {/* Social Links - Bottom Center */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
+      {/* Social Links - Bottom Left */}
+      <div className="absolute bottom-8 left-8 z-50 animate-fade-in">
         <div className="flex items-center justify-center space-x-8">
           {/* Social Links */}
           <div className="flex items-center gap-8">
