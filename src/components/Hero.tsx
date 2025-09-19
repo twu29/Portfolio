@@ -22,23 +22,47 @@ const Hero = () => {
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-primary/60 rounded-full animate-float animation-delay-2000 opacity-60" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left animate-slide-up">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
+          {/* Content - Mobile: Order 1, Desktop: Order 1 */}
+          <div className="text-center lg:text-left animate-slide-up order-1 lg:order-1">
             <h1 className="text-5xl lg:text-7xl font-orbitron font-black mb-6">
               Hello, I'm{" "}
               <span className="text-primary text-glow">Tong Wu</span>
             </h1>
+            <p className="text-lg lg:text-xl text-muted-foreground mb-6 font-space-grotesk">
+              But you can call me <span className="text-pink-soft font-semibold">Alley</span> 😊
+            </p>
+          </div>
+
+          {/* Profile photo - Mobile: Order 2, Desktop: Order 2 */}
+          <div className="flex justify-center lg:justify-end order-2 lg:order-2">
+            <div className="relative">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
+                <img 
+                  src={profilePhoto} 
+                  alt="Tong Wu (Alley)" 
+                  className="w-full h-full object-cover transition-smooth hover:scale-110 animate-float"
+                />
+              </div>
+              {/* Decorative ring */}
+              <div className="absolute -inset-4 border-2 border-primary/30 rounded-full animate-pulse" />
+              {/* Extra motion ring */}
+              <div className="absolute -inset-8 border border-primary/20 rounded-full animate-ping opacity-75" />
+            </div>
+          </div>
+
+          {/* Additional content - Mobile: Order 3, Desktop: spans both columns */}
+          <div className="order-3 lg:order-3 lg:col-span-2 text-center lg:text-left">
             <p className="text-xl lg:text-2xl font-exo font-semibold text-pink-soft mb-4">
               AI Software Engineer
             </p>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl font-space-grotesk leading-relaxed">
+            <p className="text-lg text-muted-foreground mb-8 max-w-2xl font-space-grotesk leading-relaxed mx-auto lg:mx-0">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
             
             {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 variant="hero" 
                 size="xl"
@@ -55,47 +79,6 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
-            </div>
-
-            {/* Social links */}
-            <div className="flex gap-6 justify-center lg:justify-start">
-              <a 
-                href="https://linkedin.com/in/alley-wu" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110"
-              >
-                <Linkedin size={24} />
-              </a>
-              <a 
-                href="https://github.com" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110"
-              >
-                <Github size={24} />
-              </a>
-              <a 
-                href="mailto:alleytongwu@gmail.com"
-                className="text-muted-foreground hover:text-primary transition-smooth hover:scale-110"
-              >
-                <Mail size={24} />
-              </a>
-            </div>
-          </div>
-
-          {/* Profile photo */}
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative">
-              <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
-                <img 
-                  src={profilePhoto} 
-                  alt="Tong Wu" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 border-2 border-primary/30 rounded-full animate-pulse" />
             </div>
           </div>
         </div>
