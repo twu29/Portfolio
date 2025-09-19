@@ -54,7 +54,9 @@ const Projects = () => {
       description: "Designed a high-fidelity prototype with mood check-ins, personalized tips, and campus activities. Ran 10+ user interviews and a survey to surface needs and support gaps. Conducted cognitive walkthroughs + heuristic evaluations; fixed UX issues and streamlined flows.",
       technologies: ["Figma", "UX Design", "User Research", "Prototyping"],
       period: "December 2024 – March 2025",
-      links: {},
+      links: {
+        demo: "https://www.figma.com/proto/KTfO4KFSGtvd0Rzx6eDX4y/MineBuddy?node-id=408-1105&starting-point-node-id=39%3A814&t=qWbUXEM7IS0E4cH4-1"
+      },
       icon: "💙"
     },
     {
