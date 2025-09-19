@@ -43,7 +43,7 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 w-full bg-background/95 backdrop-blur-lg z-50 border-b-2 border-primary shadow-pink-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           {/* Logo */}
           <div className="flex-shrink-0">
             <button
@@ -53,7 +53,7 @@ const Navigation = () => {
               <img 
                 src={logo} 
                 alt="Alley Logo" 
-                className="w-32 h-32 object-contain group-hover:scale-105 transition-smooth filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 group-hover:hue-rotate-[315deg] group-hover:saturate-150"
+                className="w-16 h-16 object-contain group-hover:scale-105 transition-smooth filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 group-hover:hue-rotate-[315deg] group-hover:saturate-150"
               />
             </button>
           </div>
