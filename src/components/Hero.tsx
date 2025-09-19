@@ -74,19 +74,6 @@ const Hero = () => {
                   <Linkedin size={20} />
                 </a>
               </div>
-              
-              {/* Scroll indicator to About - Positioned at bottom center */}
-              <div className="flex justify-center mt-12">
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
-                >
-                  <span className="text-sm font-space-grotesk mb-2">Learn More</span>
-                  <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-                  </div>
-                </button>
-              </div>
             </div>
           </div>
 
@@ -127,6 +114,19 @@ const Hero = () => {
               </button>
             </div>
           </div>
+        </div>
+        
+        {/* Desktop Learn More Button - Positioned at bottom center of homepage */}
+        <div className="hidden lg:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+          <button
+            onClick={() => scrollToSection("about")}
+            className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
+          >
+            <span className="text-sm font-space-grotesk mb-2">Learn More</span>
+            <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+            </div>
+          </button>
         </div>
       </div>
     </section>
