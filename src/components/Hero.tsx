@@ -46,44 +46,6 @@ const Hero = () => {
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
               
-              {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-6 mb-8">
-                <div className="flex flex-col items-center">
-                  <a
-                    href="mailto:your.email@example.com"
-                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
-                    aria-label="Email"
-                  >
-                    <Mail size={20} />
-                  </a>
-                  <span className="text-xs font-space-grotesk text-muted-foreground">Email</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <a
-                    href="/Alley_Resume.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
-                    aria-label="Resume"
-                  >
-                    <Download size={20} />
-                  </a>
-                  <span className="text-xs font-space-grotesk text-muted-foreground">Resume</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <a
-                    href="https://linkedin.com/in/your-profile"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
-                    aria-label="LinkedIn"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                  <span className="text-xs font-space-grotesk text-muted-foreground">LinkedIn</span>
-                </div>
-              </div>
-              
               {/* Scroll indicator to About */}
               <div className="flex justify-center lg:justify-start mt-8">
                 <button
@@ -135,6 +97,62 @@ const Hero = () => {
                 </div>
               </button>
             </div>
+          </div>
+        </div>
+      </div>
+      
+      {/* Fixed Social Links - Bottom Left Corner */}
+      <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
+        <div className="flex flex-col items-center space-y-4">
+          {/* Social Links */}
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col items-center">
+              <a
+                href="mailto:your.email@example.com"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="Email"
+              >
+                <Mail size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">Email</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <a
+                href="/Alley_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="Resume"
+              >
+                <Download size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">Resume</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <a
+                href="https://linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">LinkedIn</span>
+            </div>
+          </div>
+          
+          {/* Learn More */}
+          <div className="mt-4">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
+            >
+              <span className="text-xs font-space-grotesk mb-2">Learn More</span>
+              <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
