@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
+import { Brain, Cpu, Zap } from "lucide-react";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,16 +50,19 @@ const Navigation = () => {
               onClick={() => scrollToSection("home")}
               className="flex items-center space-x-2 group"
             >
-              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-smooth">
-                <span className="font-orbitron font-black text-background text-lg">TW</span>
-              </div>
-              <div className="hidden sm:block">
-                <div className="font-orbitron font-black text-xl text-primary text-glow group-hover:text-pink-soft transition-smooth">
-                  TONG WU
+              <div className="relative w-10 h-10 bg-gradient-primary rounded-xl flex items-center justify-center group-hover:scale-105 transition-smooth overflow-hidden">
+                {/* Tech-inspired logo design */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary to-pink-soft opacity-20 animate-pulse"></div>
+                <div className="relative flex items-center justify-center">
+                  <Brain size={16} className="text-background absolute animate-pulse" />
+                  <Cpu size={12} className="text-background/80 absolute translate-x-1 translate-y-1" />
+                  <Zap size={10} className="text-background/60 absolute -translate-x-1 -translate-y-1" />
                 </div>
-                <div className="text-xs text-muted-foreground font-space-grotesk">
-                  AI Software Engineer
-                </div>
+                {/* Circuit-like lines */}
+                <div className="absolute top-1 left-1 w-2 h-0.5 bg-background/40"></div>
+                <div className="absolute bottom-1 right-1 w-2 h-0.5 bg-background/40"></div>
+                <div className="absolute top-1 right-1 w-0.5 h-2 bg-background/40"></div>
+                <div className="absolute bottom-1 left-1 w-0.5 h-2 bg-background/40"></div>
               </div>
             </button>
           </div>

@@ -21,48 +21,28 @@ const Hero = () => {
       <div className="absolute top-40 right-20 w-6 h-6 bg-primary/40 rounded-full animate-float animation-delay-1000 opacity-60" />
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-primary/60 rounded-full animate-float animation-delay-2000 opacity-60" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
-        <div className="flex flex-col items-center text-center space-y-8 lg:space-y-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Content */}
-          <div className="animate-slide-up">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-orbitron font-black mb-2">
+          <div className="text-center lg:text-left animate-slide-up">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-orbitron font-black mb-2 leading-tight">
               Hello, I'm{" "}
-              <span className="text-primary text-glow">Tong Wu</span>
+              <span className="text-primary text-glow block sm:inline">Tong Wu</span>
             </h1>
-            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-1 font-space-grotesk">
+            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground mb-1 font-space-grotesk">
               But you can call me <span className="text-pink-soft font-semibold">Alley</span> 😊
             </p>
-            <p className="text-xl sm:text-2xl lg:text-3xl font-exo font-semibold text-pink-soft mb-6">
+            <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-exo font-semibold text-pink-soft mb-6">
               AI Software Engineer
             </p>
-          </div>
-
-          {/* Profile photo */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
-                <img 
-                  src={profilePhoto} 
-                  alt="Tong Wu (Alley)" 
-                  className="w-full h-full object-cover transition-smooth hover:scale-110 animate-float"
-                />
-              </div>
-              {/* Decorative ring */}
-              <div className="absolute -inset-4 border-2 border-primary/30 rounded-full animate-pulse" />
-              {/* Extra motion ring */}
-              <div className="absolute -inset-8 border border-primary/20 rounded-full animate-ping opacity-75" />
-            </div>
-          </div>
-
-          {/* Description and buttons */}
-          <div className="max-w-3xl">
-            <p className="text-base sm:text-lg text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
+            
+            <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-8 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
             
             {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
                 variant="hero" 
                 size="xl"
@@ -79,6 +59,23 @@ const Hero = () => {
               >
                 Get In Touch
               </Button>
+            </div>
+          </div>
+
+          {/* Profile photo */}
+          <div className="flex justify-center lg:justify-end">
+            <div className="relative">
+              <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
+                <img 
+                  src={profilePhoto} 
+                  alt="Tong Wu (Alley)" 
+                  className="w-full h-full object-cover transition-smooth hover:scale-110 animate-float"
+                />
+              </div>
+              {/* Decorative ring */}
+              <div className="absolute -inset-4 border-2 border-primary/30 rounded-full animate-pulse" />
+              {/* Extra motion ring */}
+              <div className="absolute -inset-8 border border-primary/20 rounded-full animate-ping opacity-75" />
             </div>
           </div>
         </div>
