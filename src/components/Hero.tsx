@@ -56,7 +56,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <Mail size={20} />
                   </div>
-                  <span className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">Email</span>
+                  <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">Email</span>
                 </a>
                 <a
                   href="/Alley_Resume.pdf"
@@ -68,7 +68,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <FileText size={20} />
                   </div>
-                  <span className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">Resume</span>
+                  <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">Resume</span>
                 </a>
                 <a
                   href="https://linkedin.com/in/your-profile"
@@ -80,7 +80,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <Linkedin size={20} />
                   </div>
-                  <span className="absolute left-full ml-3 top-1/2 transform -translate-y-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">LinkedIn</span>
+                  <span className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 whitespace-nowrap">LinkedIn</span>
                 </a>
               </div>
             </div>
