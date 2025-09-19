@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import { Brain, Cpu, Zap } from "lucide-react";
+import logo from "../assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,28 +50,12 @@ const Navigation = () => {
               onClick={() => scrollToSection("home")}
               className="flex items-center space-x-2 group"
             >
-              <div className="relative w-10 h-10 bg-gradient-primary rounded-full flex items-center justify-center group-hover:scale-105 transition-smooth overflow-hidden">
-                {/* Stylized "A" for Alley - inspired by the Gloria logo */}
-                <div className="relative w-full h-full flex items-center justify-center">
-                  {/* Main "A" shape */}
-                  <div className="absolute w-4 h-6 flex flex-col items-center">
-                    {/* Top triangle of A */}
-                    <div className="w-0 h-0 border-l-2 border-r-2 border-b-3 border-l-transparent border-r-transparent border-b-background"></div>
-                    {/* Left line of A */}
-                    <div className="absolute top-1.5 left-0.5 w-0.5 h-3 bg-background transform -rotate-12"></div>
-                    {/* Right line of A */}
-                    <div className="absolute top-1.5 right-0.5 w-0.5 h-3 bg-background transform rotate-12"></div>
-                    {/* Horizontal line of A */}
-                    <div className="absolute top-3 w-2.5 h-0.5 bg-background"></div>
-                  </div>
-                  
-                  {/* Decorative dots around the A */}
-                  <div className="absolute top-1 right-2 w-1 h-1 bg-background/60 rounded-full animate-pulse"></div>
-                  <div className="absolute bottom-1 left-2 w-0.5 h-0.5 bg-background/40 rounded-full animate-pulse animation-delay-500"></div>
-                </div>
-                
-                {/* Subtle glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-pink-soft/20 to-primary/20 animate-pulse"></div>
+              <div className="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-smooth">
+                <img 
+                  src={logo} 
+                  alt="Alley Logo" 
+                  className="w-8 h-8 object-contain filter brightness-0 invert"
+                />
               </div>
             </button>
           </div>
