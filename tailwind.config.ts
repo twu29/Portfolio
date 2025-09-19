@@ -47,16 +47,28 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        // Custom tech theme colors
+        'pink-glow': 'hsl(var(--pink-glow))',
+        'pink-soft': 'hsl(var(--pink-soft))',
+        'tech-dark': 'hsl(var(--tech-dark))',
+        'tech-darker': 'hsl(var(--tech-darker))',
+      },
+      fontFamily: {
+        'orbitron': ['Orbitron', 'monospace'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
+        'jetbrains': ['JetBrains Mono', 'monospace'],
+        'chakra': ['Chakra Petch', 'sans-serif'],
+        'exo': ['Exo 2', 'sans-serif'],
+      },
+      boxShadow: {
+        'pink-glow': '0 0 30px hsl(var(--primary) / 0.5)',
+        'pink-soft': '0 10px 30px hsl(var(--primary) / 0.3)',
+        'tech': '0 10px 50px hsl(0 0% 0% / 0.8)',
+      },
+      animation: {
+        'float': 'float 6s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'slide-up': 'slideUp 0.5s ease-out',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,10 +92,18 @@ export default {
             height: "0",
           },
         },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-20px)' },
+        },
+        glow: {
+          '0%': { boxShadow: '0 0 20px hsl(var(--primary) / 0.5)' },
+          '100%': { boxShadow: '0 0 40px hsl(var(--primary) / 0.8)' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },
