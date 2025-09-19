@@ -137,7 +137,7 @@ const Projects = () => {
                 <div className="flex-shrink-0 lg:w-1/4 flex flex-row lg:flex-col gap-3">
                   {project.links.github && (
                     <Button 
-                      variant="glow" 
+                      variant="tech" 
                       size="sm"
                       asChild
                       className="w-full"
