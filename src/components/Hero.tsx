@@ -46,24 +46,17 @@ const Hero = () => {
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
               
-              {/* Action buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button 
-                  variant="hero" 
-                  size="xl"
-                  onClick={() => scrollToSection("projects")}
-                  className="group"
+              {/* Scroll indicator to About */}
+              <div className="flex justify-center lg:justify-start mt-8">
+                <button
+                  onClick={() => scrollToSection("about")}
+                  className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
                 >
-                  View My Work
-                  <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-                </Button>
-                <Button 
-                  variant="tech" 
-                  size="xl"
-                  onClick={() => scrollToSection("contact")}
-                >
-                  Get In Touch
-                </Button>
+                  <span className="text-sm font-space-grotesk mb-2">Learn More</span>
+                  <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                    <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+                  </div>
+                </button>
               </div>
             </div>
           </div>
@@ -85,31 +78,24 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Mobile description and buttons - Order 3 */}
+          {/* Mobile description and scroll indicator - Order 3 */}
           <div className="lg:hidden text-center order-3 max-w-lg mx-auto">
             <p className="text-sm sm:text-base text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
             
-            {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
-              <Button 
-                variant="hero" 
-                size="xl"
-                onClick={() => scrollToSection("projects")}
-                className="group"
+            {/* Scroll indicator to About */}
+            <div className="flex justify-center">
+              <button
+                onClick={() => scrollToSection("about")}
+                className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
               >
-                View My Work
-                <span className="ml-2 transform group-hover:translate-x-1 transition-transform">→</span>
-              </Button>
-              <Button 
-                variant="tech" 
-                size="xl"
-                onClick={() => scrollToSection("contact")}
-              >
-                Get In Touch
-              </Button>
+                <span className="text-sm font-space-grotesk mb-2">Learn More</span>
+                <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                  <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+                </div>
+              </button>
             </div>
           </div>
         </div>
