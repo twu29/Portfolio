@@ -50,9 +50,9 @@ const About = () => {
                 <p>ideas into meaningful solutions 💪</p>
               </div>
 
-              {/* Command 3 */}
+              {/* Command 3 - Technical Skills */}
               <div className="text-green-400 mt-6">
-                <span className="text-primary">alley@uw:~$</span> ls skills/
+                <span className="text-primary">alley@uw:~$</span> ls technical_skills/
               </div>
               <div className="ml-4 mt-2">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
@@ -95,7 +95,34 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Command 4 */}
+              {/* Command 4 - Soft Skills */}
+              <div className="text-green-400 mt-6">
+                <span className="text-primary">alley@uw:~$</span> ls soft_skills/
+              </div>
+              <div className="ml-4 mt-2">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    communication/
+                  </Badge>
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    collaboration/
+                  </Badge>
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    problem_solving/
+                  </Badge>
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    adaptability/
+                  </Badge>
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    creativity/
+                  </Badge>
+                  <Badge className="bg-secondary/20 text-blue-400 border border-secondary/30 px-2 py-1 text-xs font-mono">
+                    time_management/
+                  </Badge>
+                </div>
+              </div>
+
+              {/* Command 5 */}
               <div className="text-green-400 mt-6">
                 <span className="text-primary">alley@uw:~$</span> echo $STATUS
               </div>
