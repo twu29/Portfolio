@@ -56,7 +56,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <Mail size={20} />
                   </div>
-                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">Email</span>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0">Email</span>
                 </a>
                 <a
                   href="/Alley_Resume.pdf"
@@ -68,7 +68,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <FileText size={20} />
                   </div>
-                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">Resume</span>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0">Resume</span>
                 </a>
                 <a
                   href="https://linkedin.com/in/your-profile"
@@ -80,7 +80,7 @@ const Hero = () => {
                   <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
                     <Linkedin size={20} />
                   </div>
-                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">LinkedIn</span>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth opacity-0 group-hover:opacity-100 transform translate-x-[-10px] group-hover:translate-x-0">LinkedIn</span>
                 </a>
               </div>
             </div>
