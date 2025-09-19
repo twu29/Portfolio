@@ -47,32 +47,41 @@ const Hero = () => {
               </p>
               
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-4 mb-8">
-                <a
-                  href="mailto:your.email@example.com"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="Email"
-                >
-                  <Mail size={20} />
-                </a>
-                <a
-                  href="/Alley_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="Resume"
-                >
-                  <Download size={20} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={20} />
-                </a>
+              <div className="flex justify-center lg:justify-start gap-6 mb-8">
+                <div className="flex flex-col items-center">
+                  <a
+                    href="mailto:your.email@example.com"
+                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                    aria-label="Email"
+                  >
+                    <Mail size={20} />
+                  </a>
+                  <span className="text-xs font-space-grotesk text-muted-foreground">Email</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <a
+                    href="/Alley_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                    aria-label="Resume"
+                  >
+                    <Download size={20} />
+                  </a>
+                  <span className="text-xs font-space-grotesk text-muted-foreground">Resume</span>
+                </div>
+                <div className="flex flex-col items-center">
+                  <a
+                    href="https://linkedin.com/in/your-profile"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin size={20} />
+                  </a>
+                  <span className="text-xs font-space-grotesk text-muted-foreground">LinkedIn</span>
+                </div>
               </div>
               
               {/* Scroll indicator to About */}
