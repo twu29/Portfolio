@@ -71,9 +71,9 @@ const Navigation = () => {
               className="flex items-center space-x-2 group"
             >
               <img 
-                src={processedLogo || logo} 
+                src={logo} 
                 alt="Alley Logo" 
-                className="w-16 h-16 object-contain group-hover:scale-105 transition-smooth group-hover:hue-rotate-[315deg] group-hover:saturate-150"
+                className="w-16 h-16 object-contain group-hover:scale-105 transition-smooth group-hover:hue-rotate-[315deg] group-hover:saturate-150 invert"
               />
             </button>
           </div>
