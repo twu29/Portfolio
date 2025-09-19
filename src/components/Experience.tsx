@@ -51,8 +51,77 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Vertical Roadmap */}
+        {/* Mobile Horizontal Layout */}
+        <div className="block md:hidden">
+          <div className="relative">
+            {/* Horizontal timeline line */}
+            <div className="absolute top-8 left-8 right-8 h-1 bg-gradient-to-r from-primary via-primary/50 to-primary/20" />
+            
+            <div className="flex overflow-x-auto pb-4 space-x-8 px-4">
+              {experiences.map((exp, index) => (
+                <div 
+                  key={index}
+                  className="relative flex-shrink-0 w-80 animate-fade-in"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
+                  {/* Timeline Node */}
+                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
+                    <div className={`w-16 h-16 rounded-full border-4 flex items-center justify-center ${
+                      exp.current 
+                        ? "bg-primary border-primary shadow-pink-glow animate-glow" 
+                        : "bg-card border-primary/50"
+                    }`}>
+                      {exp.current ? (
+                        <div className="w-6 h-6 bg-primary-foreground rounded-full" />
+                      ) : (
+                        <div className="w-4 h-4 bg-primary rounded-full" />
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Content Box */}
+                  <div className="mt-20">
+                    <div className="bg-card border border-primary/30 rounded-xl p-4 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
+                      <div className="mb-3">
+                        <h3 className="text-lg font-exo font-bold text-primary mb-1">
+                          {exp.title}
+                        </h3>
+                        <h4 className="text-base font-space-grotesk font-semibold text-pink-soft mb-1">
+                          {exp.company}
+                        </h4>
+                        <p className="text-muted-foreground font-jetbrains text-xs mb-2">
+                          {exp.location}
+                        </p>
+                        <div className="flex flex-col gap-1">
+                          <span className="font-chakra font-semibold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/30 text-xs text-center">
+                            {exp.period}
+                          </span>
+                          {exp.current && (
+                            <span className="text-xs font-exo font-bold bg-primary text-primary-foreground px-2 py-1 rounded-full animate-pulse text-center">
+                              CURRENT
+                            </span>
+                          )}
+                        </div>
+                      </div>
+
+                      <ul className="space-y-1 font-space-grotesk text-muted-foreground text-xs">
+                        {exp.achievements.map((achievement, achIndex) => (
+                          <li key={achIndex} className="flex items-start gap-2">
+                            <span className="text-primary mt-1 flex-shrink-0 text-xs">▸</span>
+                            <span className="leading-relaxed">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Desktop Vertical Roadmap */}
+        <div className="hidden md:block max-w-4xl mx-auto">
           <div className="relative">
             {/* Central vertical line */}
             <div className="absolute left-1/2 transform -translate-x-0.5 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20" />
