@@ -75,8 +75,8 @@ const Hero = () => {
                 </a>
               </div>
               
-              {/* Scroll indicator to About */}
-              <div className="flex justify-center lg:justify-center mt-8">
+              {/* Scroll indicator to About - Positioned at bottom center */}
+              <div className="flex justify-center mt-12">
                 <button
                   onClick={() => scrollToSection("about")}
                   className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
