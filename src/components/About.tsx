@@ -128,7 +128,7 @@ const About = () => {
               </div>
               <div className="text-gray-300 ml-4 space-y-2">
                 <p>🍰 Baking & Cooking - Creating delicious experiments in the kitchen</p>
-                <p>🍵 Matcha lover - Starting each day with mindful moments</p>
+                <p>🍵 Matcha explorer – Discovering the best blends, lattes, and desserts around town</p>
                 <p>💪 Weightlifting - Building strength, mind and body</p>
                 <p>🌅 Sunset watching - Capturing nature's daily masterpiece</p>
               </div>
