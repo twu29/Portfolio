@@ -14,6 +14,18 @@ const Experience = () => {
       current: true
     },
     {
+      title: "Product Manager",
+      company: "Women in Informatics (WINFO) Hackathon",
+      location: "University of Washington",
+      period: "Jan 2025",
+      achievements: [
+        "Led a 4-person team to design and ship a disaster-relief prototype (Figma) in 9 hours",
+        "Built interactive features including recipient profiles, real-time donor-need matching, and transparent donation tracking",
+        "Selected top finalist; Best Overall Project — 2nd Place"
+      ],
+      current: false
+    },
+    {
       title: "Vice President",
       company: "Husky Help Organization (UW RSO)",
       location: "University of Washington",
