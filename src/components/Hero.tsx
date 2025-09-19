@@ -47,32 +47,40 @@ const Hero = () => {
               </p>
               
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-4 mb-16">
+              <div className="flex justify-center lg:justify-start gap-6 mb-16">
                 <a
                   href="mailto:your.email@example.com"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  className="flex items-center gap-3 group"
                   aria-label="Email"
                 >
-                  <Mail size={20} />
+                  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
+                    <Mail size={20} />
+                  </div>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">Email</span>
                 </a>
                 <a
                   href="/Alley_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  className="flex items-center gap-3 group"
                   aria-label="Resume"
-                  title="Resume"
                 >
-                  <FileText size={20} />
+                  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
+                    <FileText size={20} />
+                  </div>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">Resume</span>
                 </a>
                 <a
                   href="https://linkedin.com/in/your-profile"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  className="flex items-center gap-3 group"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin size={20} />
+                  <div className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-smooth group-hover:scale-110">
+                    <Linkedin size={20} />
+                  </div>
+                  <span className="text-sm font-space-grotesk text-muted-foreground group-hover:text-primary transition-smooth">LinkedIn</span>
                 </a>
               </div>
             </div>
