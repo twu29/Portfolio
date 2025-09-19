@@ -21,21 +21,24 @@ const Hero = () => {
       <div className="absolute top-40 right-20 w-6 h-6 bg-primary/40 rounded-full animate-float animation-delay-1000 opacity-60" />
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-primary/60 rounded-full animate-float animation-delay-2000 opacity-60" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content - Mobile: Order 1, Desktop: Order 1 */}
-          <div className="text-center lg:text-left animate-slide-up order-1 lg:order-1">
-            <h1 className="text-5xl lg:text-7xl font-orbitron font-black mb-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="flex flex-col items-center text-center space-y-8 lg:space-y-12">
+          {/* Content */}
+          <div className="animate-slide-up">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-orbitron font-black mb-2">
               Hello, I'm{" "}
               <span className="text-primary text-glow">Tong Wu</span>
             </h1>
-            <p className="text-lg lg:text-xl text-muted-foreground mb-6 font-space-grotesk">
+            <p className="text-lg sm:text-xl lg:text-2xl text-muted-foreground mb-1 font-space-grotesk">
               But you can call me <span className="text-pink-soft font-semibold">Alley</span> 😊
+            </p>
+            <p className="text-xl sm:text-2xl lg:text-3xl font-exo font-semibold text-pink-soft mb-6">
+              AI Software Engineer
             </p>
           </div>
 
-          {/* Profile photo - Mobile: Order 2, Desktop: Order 2 */}
-          <div className="flex justify-center lg:justify-end order-2 lg:order-2">
+          {/* Profile photo */}
+          <div className="flex justify-center">
             <div className="relative">
               <div className="w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary shadow-pink-glow animate-glow">
                 <img 
@@ -51,18 +54,15 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Additional content - Mobile: Order 3, Desktop: spans both columns */}
-          <div className="order-3 lg:order-3 lg:col-span-2 text-center lg:text-left">
-            <p className="text-xl lg:text-2xl font-exo font-semibold text-pink-soft mb-4">
-              AI Software Engineer
-            </p>
-            <p className="text-lg text-muted-foreground mb-8 max-w-2xl font-space-grotesk leading-relaxed mx-auto lg:mx-0">
+          {/* Description and buttons */}
+          <div className="max-w-3xl">
+            <p className="text-base sm:text-lg text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
             
             {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
               <Button 
                 variant="hero" 
                 size="xl"

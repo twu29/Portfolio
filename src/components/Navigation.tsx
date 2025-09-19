@@ -47,9 +47,19 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection("home")}
-              className="font-orbitron font-black text-2xl text-primary text-glow hover:text-pink-soft transition-smooth"
+              className="flex items-center space-x-2 group"
             >
-              TONG WU
+              <div className="w-10 h-10 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:scale-105 transition-smooth">
+                <span className="font-orbitron font-black text-background text-lg">TW</span>
+              </div>
+              <div className="hidden sm:block">
+                <div className="font-orbitron font-black text-xl text-primary text-glow group-hover:text-pink-soft transition-smooth">
+                  TONG WU
+                </div>
+                <div className="text-xs text-muted-foreground font-space-grotesk">
+                  AI Software Engineer
+                </div>
+              </div>
             </button>
           </div>
 
@@ -59,11 +69,7 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`font-exo font-semibold uppercase tracking-wider px-4 py-2 rounded-full border transition-smooth ${
-                  activeSection === item.id
-                    ? "bg-primary text-primary-foreground border-primary shadow-pink-soft"
-                    : "border-primary/30 text-foreground hover:border-primary hover:bg-primary/10 hover:text-primary"
-                }`}
+                className="font-exo font-semibold uppercase tracking-wider px-4 py-2 text-foreground hover:text-primary transition-smooth"
               >
                 {item.label}
               </button>
@@ -95,11 +101,7 @@ const Navigation = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`block w-full text-left px-4 py-3 rounded-lg font-exo font-semibold uppercase tracking-wider transition-smooth ${
-                    activeSection === item.id
-                      ? "bg-primary text-primary-foreground"
-                      : "text-foreground hover:bg-primary/10 hover:text-primary"
-                  }`}
+                  className="block w-full text-left px-4 py-3 rounded-lg font-exo font-semibold uppercase tracking-wider text-foreground hover:bg-primary/10 hover:text-primary transition-smooth"
                 >
                   {item.label}
                 </button>
