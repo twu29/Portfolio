@@ -117,7 +117,7 @@ const Hero = () => {
         </div>
         
         {/* Desktop Learn More Button - Positioned at bottom center of homepage */}
-        <div className="hidden lg:flex absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20">
+        <div className="hidden lg:flex absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20">
           <button
             onClick={() => scrollToSection("about")}
             className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
