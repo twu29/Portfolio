@@ -150,10 +150,10 @@ const Projects = () => {
                   )}
                   {project.links.report && (
                     <Button 
-                      variant="outline" 
+                      variant="tech" 
                       size="sm"
                       asChild
-                      className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                      className="w-full"
                     >
                       <a href={project.links.report} target="_blank" rel="noopener noreferrer">
                         {project.links.report.includes('youtube') ? (
