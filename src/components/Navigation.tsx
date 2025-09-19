@@ -53,7 +53,7 @@ const Navigation = () => {
               <img 
                 src={logo} 
                 alt="Alley Logo" 
-                className="w-8 h-8 object-contain group-hover:scale-105 transition-smooth filter brightness-0 invert"
+                className="w-8 h-8 object-contain group-hover:scale-105 transition-smooth filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 group-hover:hue-rotate-[315deg] group-hover:saturate-150"
               />
             </button>
           </div>
