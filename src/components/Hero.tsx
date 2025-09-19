@@ -41,7 +41,7 @@ const Hero = () => {
                 AI Software Engineer
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-12 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
                 Welcome to my digital world where I share my life, experiences, and adventures. 
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
@@ -109,7 +109,7 @@ const Hero = () => {
 
           {/* Mobile description and scroll indicator - Order 3 */}
           <div className="lg:hidden text-center order-3 max-w-lg mx-auto">
-            <p className="text-sm sm:text-base text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-12 font-space-grotesk leading-relaxed px-4">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
