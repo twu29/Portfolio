@@ -128,7 +128,7 @@ const Projects = () => {
                         <Badge 
                           key={tech} 
                           variant="secondary" 
-                          className="bg-primary/10 text-primary border border-primary/30 hover:bg-primary hover:text-primary-foreground transition-smooth"
+                          className="bg-primary/10 text-primary border border-primary/30"
                         >
                           {tech}
                         </Badge>
