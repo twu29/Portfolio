@@ -41,13 +41,13 @@ const Hero = () => {
                 AI Software Engineer
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-12 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-16 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
                 Welcome to my digital world where I share my life, experiences, and adventures. 
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
               
               {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-4 mb-8">
+              <div className="flex justify-center lg:justify-start gap-4 mb-16">
                 <a
                   href="mailto:your.email@example.com"
                   className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
@@ -59,7 +59,7 @@ const Hero = () => {
                   href="/Alley_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:text-primary-foreground transition-smooth hover:scale-110"
                   aria-label="Resume"
                 >
                   <Download size={20} />
