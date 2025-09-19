@@ -148,19 +148,6 @@ const Projects = () => {
                       </a>
                     </Button>
                   )}
-                  {project.links.demo && (
-                    <Button 
-                      variant="tech" 
-                      size="sm"
-                      asChild
-                      className="w-full"
-                    >
-                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} />
-                        Live Demo
-                      </a>
-                    </Button>
-                  )}
                   {project.links.report && (
                     <Button 
                       variant="outline" 
@@ -175,6 +162,19 @@ const Projects = () => {
                           <FileText size={16} />
                         )}
                         {project.links.report.includes('youtube') ? 'Video Demo' : 'Report'}
+                      </a>
+                    </Button>
+                  )}
+                  {project.links.demo && (
+                    <Button 
+                      variant="tech" 
+                      size="sm"
+                      asChild
+                      className="w-full"
+                    >
+                      <a href={project.links.demo} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink size={16} />
+                        App
                       </a>
                     </Button>
                   )}
