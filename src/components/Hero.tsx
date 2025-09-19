@@ -41,10 +41,39 @@ const Hero = () => {
                 AI Software Engineer
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-8 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
                 Welcome to my digital world where I share my life, experiences, and adventures. 
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
+              
+              {/* Social Links */}
+              <div className="flex justify-center lg:justify-start gap-4 mb-8">
+                <a
+                  href="mailto:your.email@example.com"
+                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  aria-label="Email"
+                >
+                  <Mail size={20} />
+                </a>
+                <a
+                  href="/Alley_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  aria-label="Resume"
+                >
+                  <Download size={20} />
+                </a>
+                <a
+                  href="https://linkedin.com/in/your-profile"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin size={20} />
+                </a>
+              </div>
               
               {/* Scroll indicator to About */}
               <div className="flex justify-center lg:justify-start mt-8">
