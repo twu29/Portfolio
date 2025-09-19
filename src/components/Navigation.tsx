@@ -50,13 +50,11 @@ const Navigation = () => {
               onClick={() => scrollToSection("home")}
               className="flex items-center space-x-2 group"
             >
-              <div className="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-smooth">
-                <img 
-                  src={logo} 
-                  alt="Alley Logo" 
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
+              <img 
+                src={logo} 
+                alt="Alley Logo" 
+                className="w-8 h-8 object-contain group-hover:scale-105 transition-smooth"
+              />
             </button>
           </div>
 
