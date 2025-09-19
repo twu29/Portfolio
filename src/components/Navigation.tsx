@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
-import logo from "../assets/logo.png";
+import logo from "../assets/logo-an.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
