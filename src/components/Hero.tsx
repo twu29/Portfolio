@@ -25,19 +25,19 @@ const Hero = () => {
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[80vh]">
           {/* Content - Mobile Order 1, Desktop Order 1 */}
           <div className="text-center lg:text-left animate-slide-up order-1 lg:order-1">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-orbitron font-black mb-2 leading-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-orbitron font-black mb-6 leading-tight">
               Hello, I'm{" "}
               <span className="text-primary text-glow block sm:inline">Alley Wu</span>
             </h1>
             
             {/* Mobile: Show title here, Desktop: Show after picture */}
-            <p className="lg:hidden text-lg sm:text-xl font-exo font-semibold text-pink-soft mb-6">
+            <p className="lg:hidden text-base sm:text-lg font-exo font-semibold text-pink-soft mb-6">
               AI Software Engineer
             </p>
             
             {/* Desktop content continuation */}
             <div className="hidden lg:block">
-              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-exo font-semibold text-pink-soft mb-6">
+              <p className="text-lg sm:text-xl lg:text-xl xl:text-2xl font-exo font-semibold text-pink-soft mb-6">
                 AI Software Engineer
               </p>
               
