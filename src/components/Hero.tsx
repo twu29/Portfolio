@@ -1,5 +1,5 @@
 import { Button } from "./ui/button";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { Github, Linkedin, Mail, FileText } from "lucide-react";
 import profilePhoto from "../assets/profile-photo.jpg";
 
 const Hero = () => {
@@ -59,10 +59,11 @@ const Hero = () => {
                   href="/Alley_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:text-primary-foreground transition-smooth hover:scale-110"
+                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
                   aria-label="Resume"
+                  title="Resume"
                 >
-                  <Download size={20} />
+                  <FileText size={20} />
                 </a>
                 <a
                   href="https://linkedin.com/in/your-profile"
