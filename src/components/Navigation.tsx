@@ -54,7 +54,7 @@ const Navigation = () => {
                 <img 
                   src={logo} 
                   alt="Alley Logo" 
-                  className="w-8 h-8 object-contain filter brightness-0 invert"
+                  className="w-8 h-8 object-contain"
                 />
               </div>
             </button>
