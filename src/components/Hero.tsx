@@ -45,19 +45,6 @@ const Hero = () => {
                 Welcome to my digital world where I share my life, experiences, and adventures. 
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
-              
-              {/* Scroll indicator to About */}
-              <div className="flex justify-center lg:justify-start mt-8">
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
-                >
-                  <span className="text-sm font-space-grotesk mb-2">Learn More</span>
-                  <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-                  </div>
-                </button>
-              </div>
             </div>
           </div>
 
@@ -101,11 +88,11 @@ const Hero = () => {
         </div>
       </div>
       
-      {/* Fixed Social Links - Bottom Left Corner */}
-      <div className="fixed bottom-6 left-6 z-50 animate-fade-in">
-        <div className="flex flex-col items-center space-y-4">
+      {/* Social Links - Bottom Center */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-50 animate-fade-in">
+        <div className="flex items-center justify-center space-x-8">
           {/* Social Links */}
-          <div className="flex flex-col gap-4">
+          <div className="flex items-center gap-8">
             <div className="flex flex-col items-center">
               <a
                 href="mailto:your.email@example.com"
@@ -143,7 +130,7 @@ const Hero = () => {
           </div>
           
           {/* Learn More */}
-          <div className="mt-4">
+          <div className="ml-8">
             <button
               onClick={() => scrollToSection("about")}
               className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
