@@ -1,6 +1,6 @@
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
-import { ExternalLink, Github, FileText } from "lucide-react";
+import { ExternalLink, Github, FileText, Video } from "lucide-react";
 
 interface Project {
   title: string;
@@ -22,7 +22,10 @@ const Projects = () => {
       description: "Built coding lessons with real-time feedback and gamified features to boost engagement. Engineered accessibility tools (screen reader, dark/light mode, progress tracking), improving usability for neurodiverse students. Developed Firebase for profiles and dashboards, enabling 100% persistent progress tracking.",
       technologies: ["React", "Firebase", "JavaScript", "CSS", "Accessibility"],
       period: "March 2025 – June 2025",
-      links: {},
+      links: {
+        demo: "https://bugbusters-a4fb3.web.app/",
+        report: "https://www.youtube.com/watch?v=HMDHcuQkc94"
+      },
       icon: "🎯"
     },
     {
@@ -166,8 +169,12 @@ const Projects = () => {
                       className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                     >
                       <a href={project.links.report} target="_blank" rel="noopener noreferrer">
-                        <FileText size={16} />
-                        Report
+                        {project.links.report.includes('youtube') ? (
+                          <Video size={16} />
+                        ) : (
+                          <FileText size={16} />
+                        )}
+                        {project.links.report.includes('youtube') ? 'Video Demo' : 'Report'}
                       </a>
                     </Button>
                   )}
