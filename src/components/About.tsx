@@ -122,7 +122,18 @@ const About = () => {
                 </div>
               </div>
 
-              {/* Command 5 */}
+              {/* Command 5 - Interests & Hobbies */}
+              <div className="text-green-400 mt-6">
+                <span className="text-primary">alley@uw:~$</span> cat interests_and_hobbies.txt
+              </div>
+              <div className="text-gray-300 ml-4 space-y-2">
+                <p>🍰 Baking & Cooking - Creating delicious experiments in the kitchen</p>
+                <p>🍵 Matcha enthusiast - Finding zen in every sip</p>
+                <p>💪 Weightlifting - Building strength, mind and body</p>
+                <p>🌅 Sunset watching - Capturing nature's daily masterpiece</p>
+              </div>
+
+              {/* Command 6 */}
               <div className="text-green-400 mt-6">
                 <span className="text-primary">alley@uw:~$</span> echo $STATUS
               </div>
