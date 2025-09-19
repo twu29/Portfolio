@@ -66,13 +66,22 @@ const About = () => {
                     data_pipelines/
                   </Badge>
                   <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
+                    data_ingestion/
+                  </Badge>
+                  <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
+                    retrieval_embeddings/
+                  </Badge>
+                  <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
+                    apis_ingestion/
+                  </Badge>
+                  <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
                     sql_databases/
                   </Badge>
                   <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
                     python_java_js/
                   </Badge>
                   <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
-                    react/
+                    react_nodejs/
                   </Badge>
                   <Badge className="bg-primary/20 text-green-400 border border-primary/30 px-2 py-1 text-xs font-mono">
                     data_viz/
