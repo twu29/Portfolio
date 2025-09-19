@@ -51,67 +51,84 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/30" />
+        <div className="max-w-4xl mx-auto">
+          {/* Vertical Roadmap */}
+          <div className="relative">
+            {/* Central vertical line */}
+            <div className="absolute left-1/2 transform -translate-x-0.5 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/50 to-primary/20" />
 
-          <div className="space-y-12">
-            {experiences.map((exp, index) => (
-              <div 
-                key={index}
-                className="relative flex items-start gap-8 animate-slide-up"
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                {/* Timeline marker */}
-                <div className={`relative z-10 w-16 h-16 rounded-full border-4 flex items-center justify-center ${
-                  exp.current 
-                    ? "bg-primary border-primary shadow-pink-glow animate-glow" 
-                    : "bg-card border-primary/50"
-                }`}>
-                  {exp.current ? (
-                    <div className="w-6 h-6 bg-primary-foreground rounded-full" />
-                  ) : (
-                    <div className="w-4 h-4 bg-primary rounded-full" />
-                  )}
-                </div>
+            <div className="space-y-16">
+              {experiences.map((exp, index) => (
+                <div 
+                  key={index}
+                  className={`relative flex items-center animate-fade-in ${
+                    index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                  }`}
+                  style={{ animationDelay: `${index * 300}ms` }}
+                >
+                  {/* Content Box */}
+                  <div className={`w-5/12 ${index % 2 === 0 ? 'pr-8' : 'pl-8'}`}>
+                    <div className="bg-card border border-primary/30 rounded-xl p-6 shadow-pink-soft hover:shadow-pink-glow transition-smooth relative">
+                      {/* Arrow pointing to timeline */}
+                      <div className={`absolute top-6 w-0 h-0 ${
+                        index % 2 === 0 
+                          ? 'right-0 translate-x-full border-l-[20px] border-l-primary/30 border-y-[10px] border-y-transparent' 
+                          : 'left-0 -translate-x-full border-r-[20px] border-r-primary/30 border-y-[10px] border-y-transparent'
+                      }`} />
+                      
+                      <div className="mb-4">
+                        <h3 className="text-xl font-exo font-bold text-primary mb-2">
+                          {exp.title}
+                        </h3>
+                        <h4 className="text-lg font-space-grotesk font-semibold text-pink-soft mb-1">
+                          {exp.company}
+                        </h4>
+                        <p className="text-muted-foreground font-jetbrains text-sm mb-2">
+                          {exp.location}
+                        </p>
+                        <div className="flex items-center gap-2">
+                          <span className="font-chakra font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/30 text-sm">
+                            {exp.period}
+                          </span>
+                          {exp.current && (
+                            <span className="text-xs font-exo font-bold bg-primary text-primary-foreground px-2 py-1 rounded-full animate-pulse">
+                              CURRENT
+                            </span>
+                          )}
+                        </div>
+                      </div>
 
-                {/* Content */}
-                <div className="flex-grow bg-card border border-primary/30 rounded-xl p-8 shadow-pink-soft hover:shadow-pink-glow transition-smooth">
-                  <div className="flex flex-col lg:flex-row lg:justify-between lg:items-start mb-4">
-                    <div>
-                      <h3 className="text-2xl font-exo font-bold text-primary mb-2">
-                        {exp.title}
-                      </h3>
-                      <h4 className="text-xl font-space-grotesk font-semibold text-pink-soft mb-1">
-                        {exp.company}
-                      </h4>
-                      <p className="text-muted-foreground font-jetbrains text-sm">
-                        {exp.location}
-                      </p>
+                      <ul className="space-y-2 font-space-grotesk text-muted-foreground text-sm">
+                        {exp.achievements.map((achievement, achIndex) => (
+                          <li key={achIndex} className="flex items-start gap-3">
+                            <span className="text-primary mt-1 flex-shrink-0">▸</span>
+                            <span className="leading-relaxed">{achievement}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <div className="flex items-center gap-2 mt-2 lg:mt-0">
-                      <span className="font-chakra font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full border border-primary/30">
-                        {exp.period}
-                      </span>
-                      {exp.current && (
-                        <span className="text-xs font-exo font-bold bg-primary text-primary-foreground px-2 py-1 rounded-full animate-pulse">
-                          CURRENT
-                        </span>
+                  </div>
+
+                  {/* Timeline Node */}
+                  <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                    <div className={`w-16 h-16 rounded-full border-4 flex items-center justify-center ${
+                      exp.current 
+                        ? "bg-primary border-primary shadow-pink-glow animate-glow" 
+                        : "bg-card border-primary/50"
+                    }`}>
+                      {exp.current ? (
+                        <div className="w-6 h-6 bg-primary-foreground rounded-full" />
+                      ) : (
+                        <div className="w-4 h-4 bg-primary rounded-full" />
                       )}
                     </div>
                   </div>
 
-                  <ul className="space-y-3 font-space-grotesk text-muted-foreground">
-                    {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="flex items-start gap-3">
-                        <span className="text-primary mt-1 flex-shrink-0">▸</span>
-                        <span className="leading-relaxed">{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  {/* Empty space for opposite side */}
+                  <div className="w-5/12" />
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
