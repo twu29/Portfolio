@@ -41,52 +41,10 @@ const Hero = () => {
                 AI Software Engineer
               </p>
               
-              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-12 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
+              <p className="text-sm sm:text-base lg:text-lg text-muted-foreground mb-6 font-space-grotesk leading-relaxed max-w-xl lg:max-w-none">
                 Welcome to my digital world where I share my life, experiences, and adventures. 
                 I'm passionate about building innovative AI software solutions and exploring new technologies.
               </p>
-              
-              {/* Social Links */}
-              <div className="flex justify-center lg:justify-start gap-4 mb-8">
-                <a
-                  href="mailto:your.email@example.com"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="Email"
-                >
-                  <Mail size={20} />
-                </a>
-                <a
-                  href="/Alley_Resume.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="Resume"
-                >
-                  <Download size={20} />
-                </a>
-                <a
-                  href="https://linkedin.com/in/your-profile"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110"
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin size={20} />
-                </a>
-              </div>
-              
-              {/* Scroll indicator to About */}
-              <div className="flex justify-center lg:justify-start mt-8">
-                <button
-                  onClick={() => scrollToSection("about")}
-                  className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
-                >
-                  <span className="text-sm font-space-grotesk mb-2">Learn More</span>
-                  <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                    <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-                  </div>
-                </button>
-              </div>
             </div>
           </div>
 
@@ -107,25 +65,68 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Mobile description and scroll indicator - Order 3 */}
+          {/* Mobile description - Order 3 */}
           <div className="lg:hidden text-center order-3 max-w-lg mx-auto">
-            <p className="text-sm sm:text-base text-muted-foreground mb-12 font-space-grotesk leading-relaxed px-4">
+            <p className="text-sm sm:text-base text-muted-foreground mb-8 font-space-grotesk leading-relaxed px-4">
               Welcome to my digital world where I share my life, experiences, and adventures. 
               I'm passionate about building innovative AI software solutions and exploring new technologies.
             </p>
-            
-            {/* Scroll indicator to About */}
-            <div className="flex justify-center">
-              <button
-                onClick={() => scrollToSection("about")}
-                className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
+          </div>
+        </div>
+      </div>
+      
+      {/* Social Links - Bottom Left */}
+      <div className="absolute bottom-8 left-8 z-50 animate-fade-in">
+        <div className="flex items-center justify-center space-x-8">
+          {/* Social Links */}
+          <div className="flex items-center gap-8">
+            <div className="flex flex-col items-center">
+              <a
+                href="mailto:your.email@example.com"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="Email"
               >
-                <span className="text-sm font-space-grotesk mb-2">Learn More</span>
-                <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
-                  <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
-                </div>
-              </button>
+                <Mail size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">Email</span>
             </div>
+            <div className="flex flex-col items-center">
+              <a
+                href="/Alley_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="Resume"
+              >
+                <Download size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">Resume</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <a
+                href="https://linkedin.com/in/your-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-12 h-12 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-smooth hover:scale-110 mb-2"
+                aria-label="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <span className="text-xs font-space-grotesk text-muted-foreground">LinkedIn</span>
+            </div>
+          </div>
+          
+          {/* Learn More */}
+          <div className="ml-8">
+            <button
+              onClick={() => scrollToSection("about")}
+              className="group flex flex-col items-center text-primary hover:text-primary/80 transition-smooth"
+            >
+              <span className="text-xs font-space-grotesk mb-2">Learn More</span>
+              <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-bounce"></div>
+              </div>
+            </button>
           </div>
         </div>
       </div>
